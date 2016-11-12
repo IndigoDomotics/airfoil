@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<MenuItems>
+	<MenuItem id="resetSpeakers">
+		<Name>Reset Speaker List</Name>
+		<CallbackMethod>resetSpeakerList</CallbackMethod>
+	</MenuItem>
+	<MenuItem id="showSpeakerList">
+		<Name>Show Speaker List in Event Log</Name>
+		<CallbackMethod>showSpeakerList</CallbackMethod>
+	</MenuItem>
+	<MenuItem id="sep0"/>
+	<MenuItem id="toggleDebug">
+		<Name>Toggle Debugging</Name>
+        <CallbackMethod>toggleDebugging</CallbackMethod>
+	</MenuItem>
+</MenuItems>

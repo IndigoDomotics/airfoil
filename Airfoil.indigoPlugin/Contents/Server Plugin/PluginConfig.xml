@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<PluginConfig>
+	<Field id="createVars" type="checkbox">
+		<Label>Create Speaker Variables</Label>
+		<Description>Create a variable for each speaker for it's state.</Description>
+	</Field>
+	<Field id="sep0" type="separator"/>
+	<Field id="createSourceVar" type="checkbox">
+		<Label>Create Source Variable</Label>
+		<Description>Create a variable that contains the current source.</Description>
+	</Field>
+	<Field id="sep1" type="separator"/>
+	<Field id="topLabel" type="label" fontSize="small" fontColor="darkgray">
+		<Label>If you are having problems with the plugin (or you are instructed by support), you can enable extra logging in the Event Log window by checking this button. Use with caution.</Label>
+	</Field>
+	<Field id="showDebugInfo" type="checkbox">
+		<Label>Enable debuging:</Label>
+		<Description>(not recommended)</Description>
+	</Field>
+</PluginConfig>

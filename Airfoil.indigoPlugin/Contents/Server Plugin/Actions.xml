@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<Actions>
+	<SupportURL>http://wiki.indigodomo.com/doku.php?id=plugins:airfoil</SupportURL>
+	<Action id="connectToSpeaker">
+		<Name>Connect to Speaker</Name>
+		<CallbackMethod>connectToSpeaker</CallbackMethod>
+		<ConfigUI>
+			<Field id="speaker" type="menu">
+				<Label>Select speaker to connect:</Label>
+				<List class="self" method="uiSpeakerList"></List>
+			</Field>
+			<Field id="description" type="textfield" hidden="true">
+				<Label></Label>
+			</Field>
+		</ConfigUI>
+	</Action>
+	<Action id="disconnectFromSpeaker">
+		<Name>Disconnect from Speaker</Name>
+		<CallbackMethod>disconnectFromSpeaker</CallbackMethod>
+		<ConfigUI>
+			<Field id="speaker" type="menu">
+				<Label>Select speaker to disconnect:</Label>
+				<List class="self" method="uiSpeakerList"></List>
+			</Field>
+			<Field id="description" type="textfield" hidden="true">
+				<Label></Label>
+			</Field>
+		</ConfigUI>
+	</Action>
+	<Action id="toggleSpeaker">
+		<Name>Toggle Speaker</Name>
+		<CallbackMethod>toggleSpeaker</CallbackMethod>
+		<ConfigUI>
+			<Field id="speaker" type="menu">
+				<Label>Select speaker to connect to:</Label>
+				<List class="self" method="uiSpeakerList"></List>
+			</Field>
+			<Field id="description" type="textfield" hidden="true">
+				<Label></Label>
+			</Field>
+		</ConfigUI>
+	</Action>
+	<Action id="connectAllSpeakers">
+		<Name>Connect All Speakers</Name>
+		<CallbackMethod>connectAllSpeakers</CallbackMethod>
+	</Action>
+	<Action id="disconnectAllSpeakers">
+		<Name>Disconnect All Speakers</Name>
+		<CallbackMethod>disconnectAllSpeakers</CallbackMethod>
+	</Action>
+	<Action id="saveSpeakerSet">
+		<Name>Save Current Speaker State</Name>
+		<CallbackMethod>saveSpeakerSet</CallbackMethod>
+	</Action>
+	<Action id="restoreSpeakerSet">
+		<Name>Restore Saved Speaker State</Name>
+		<CallbackMethod>restoreSpeakerSet</CallbackMethod>
+	</Action>
+	<Action id="sep0"/>
+	<Action id="changeAudioSource">
+		<Name>Change Audio Source</Name>
+		<CallbackMethod>changeAudioSource</CallbackMethod>
+		<ConfigUI>
+			<Field id="sourceType" type="menu" defaultValue="application">
+				<Label>Select the source type:</Label>
+				<List>
+					<Option value="application">Applications</Option>
+					<Option value="device">Device</Option>
+					<Option value="system">System Audio (assumes Soundflower Installed)</Option>
+				</List>
+			</Field>
+			<Field id="appSource" type="menu" visibleBindingId="sourceType" visibleBindingValue="application">
+				<Label>Name of source:</Label>
+				<List class="self" filter="application" method="sourceList"/>
+			</Field>
+			<Field id="devSource" type="menu" visibleBindingId="sourceType" visibleBindingValue="device">
+				<Label>Name of source:</Label>
+				<List class="self" filter="device" method="sourceList"/>
+			</Field>
+			<Field id="description" type="textfield" hidden="true">
+				<Label></Label>
+			</Field>
+		</ConfigUI>
+	</Action>
+	<Action id="saveSource">
+		<Name>Save Current Source</Name>
+		<CallbackMethod>saveSource</CallbackMethod>
+	</Action>
+	<Action id="restoreSource">
+		<Name>Restore Saved Source</Name>
+		<CallbackMethod>restoreSource</CallbackMethod>
+	</Action>
+	<Action id="sep1"/>
+	<Action id="setVolume">
+		<Name>Set Volume</Name>
+		<CallbackMethod>setVolume</CallbackMethod>
+		<ConfigUI>
+			<Field id="volume" type="textfield" defaultValue="50">
+				<Label>Enter New Volume:</Label>
+				<Description>Enter an integer from 0 to 100</Description>
+			</Field>
+			<Field id="speakerIds" type="list">
+				<Label>Speaker:</Label>
+				<List class="self" method="uiSpeakerList"/>
+			</Field>
+			<Field id="description" type="textfield" hidden="true">
+				<Label></Label>
+			</Field>
+		</ConfigUI>
+	</Action>
+	<Action id="increaseVolume">
+		<Name>Increase Volume</Name>
+		<CallbackMethod>increaseVolume</CallbackMethod>
+		<ConfigUI>
+			<Field id="volume" type="textfield" defaultValue="5">
+				<Label>Amount to Increase by:</Label>
+				<Description>Enter an integer from 0 to 100</Description>
+			</Field>
+			<Field id="speakerIds" type="list">
+				<Label>Speaker:</Label>
+				<List class="self" method="uiSpeakerList"/>
+			</Field>
+			<Field id="description" type="textfield" hidden="true">
+				<Label></Label>
+			</Field>
+		</ConfigUI>
+	</Action>
+	<Action id="decreaseVolume">
+		<Name>Decrease Volume</Name>
+		<CallbackMethod>decreaseVolume</CallbackMethod>
+		<ConfigUI>
+			<Field id="volume" type="textfield" defaultValue="5">
+				<Label>Amount to Decrease by:</Label>
+				<Description>Enter an integer from 0 to 100</Description>
+			</Field>
+			<Field id="speakerIds" type="list">
+				<Label>Speaker:</Label>
+				<List class="self" method="uiSpeakerList"/>
+			</Field>
+			<Field id="description" type="textfield" hidden="true">
+				<Label></Label>
+			</Field>
+		</ConfigUI>
+	</Action>
+</Actions>

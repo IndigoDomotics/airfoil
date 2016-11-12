@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<Events>
+	<!-- Plug in events work like this:
+			1) On the Trigger tab of the Edit Trigger dialog, select your plugin
+			2) A popup will automatically show with all the Events listed below. Select one.
+			3) Indigo will show the correct EventConfigUI as specified below.
+		 SupportURL is optional - if specified then when the user clicks the help button (?) it 
+		 will open a browser to this URL. If it doesn't, the default help page for Trigger 
+		 Events will show.
+	-->
+	<SupportURL>http://wiki.indigodomo.com/doku.php?id=plugins:airfoil_1#events</SupportURL>
+	<Event id="airfoilAvailable">
+		<Name>Airfoil Becomes Available</Name>
+	</Event>
+	<Event id="airfoilUnavailable">
+		<Name>Airfoil Becomes Unavailable</Name>
+	</Event>
+	<Event id="sep1"/>
+	<Event id="speakerChange">
+		<Name>Speaker State Changes</Name>
+		<ConfigUI>
+			<Field id="speakerId" type="menu">
+				<Label>Speaker:</Label>
+				<List class="self" method="speakerList"/>
+			</Field>
+			<Field id="changeType" type="list">
+				<Label>Changes to monitor for:</Label>
+				<List>
+					<Option value="becomesConnected">Becomes Connected</Option>
+					<Option value="becomesDisconnected">Becomes Disconnected</Option>
+					<Option value="becomesAvailable">Becomes Available</Option>
+					<Option value="becomesUnavailable">Becomes Unavailable</Option>
+				</List>
+			</Field>
+		</ConfigUI>
+	</Event>
+	<Event id="sourceChange">
+		<Name>Audio Source Changes</Name>
+	</Event>
+</Events>
